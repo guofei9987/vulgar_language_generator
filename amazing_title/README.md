@@ -1,7 +1,7 @@
 
 ## 震惊体生成器
 
-
+[demo](http://www.guofei.site/2019/09/07/amazing_title.html)
 
 生成结果
 >这太神了！首次解禁，完全颠覆你的想象！
