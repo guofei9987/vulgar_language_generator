@@ -4,18 +4,17 @@ var two_char_words = ['朱砂', '天下', '杀伐', '人家', '韶华', '风华'
     '烟花', '离殇', '情殇', '爱殇', '剑殇', '灼伤', '仓皇', '匆忙', '陌上', '清商', '焚香', '墨香', '微凉', '断肠',
     '痴狂', '凄凉', '黄梁', '未央', '成双', '无恙', '虚妄', '凝霜', '洛阳', '长安', '江南', '忘川', '千年', '纸伞',
     '烟雨', '回眸', '公子', '红尘', '红颜', '红衣', '红豆', '红线', '青丝', '青史', '青冢', '白发', '白首', '白骨',
-    '黄土', '黄泉', '碧落', '紫陌']
+    '黄土', '黄泉', '碧落', '紫陌'];
 
 var four_char_words = ['情深缘浅', '情深不寿', '莫失莫忘', '阴阳相隔', '如花美眷', '似水流年',
-    '眉目如画', '曲终人散', '繁华落尽', '不诉离殇', '一世长安']
+    '眉目如画', '曲终人散', '繁华落尽', '不诉离殇', '一世长安'];
 
 var sentence_model = ['xx，xx，xx了xx。', 'xxxx，xxxx，不过是一场xxxx。', '你说xxxx，我说xxxx，最后不过xxxx。',
-    'xx，xx，许我一场xxxx。', '一x一x一xx，半x半x半xx。', '你说xxxxxxxx，后来xxxxxxxx。', 'xxxx，xxxx，终不敌xxxx。']
+    'xx，xx，许我一场xxxx。', '一x一x一xx，半x半x半xx。', '你说xxxxxxxx，后来xxxxxxxx。', 'xxxx，xxxx，终不敌xxxx。'];
 
 
 function vulgar_poet() {
-    var sentence = sentence_model[Math.floor(sentence_model.length * Math.random())];
-
+    let sentence = sentence_model[Math.floor(sentence_model.length * Math.random())];
 
     while (sentence.indexOf('xxxx') >= 0) {
         let four_char = four_char_words[Math.floor(four_char_words.length * Math.random())];
