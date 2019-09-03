@@ -10,7 +10,7 @@
 
 
 ```html
-<script src="http://www.guofei.site/vulgar_language_generator/amazing_title/vulgar_poet.js"></script>
+<script src="http://www.guofei.site/vulgar_language_generator/vulgar_poet/vulgar_poet.js"></script>
 <script>
     // 这一段代码可以放到head/引用/body中，都可以调用
     function myFunction() {
