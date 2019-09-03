@@ -1,8 +1,11 @@
 
 
-
 ## 恶俗古风诗歌生成器
 此文件夹里有两个版本：js版（可以直接部署到网页上）和Python版
+
+[demo](http://www.guofei.site/2019/09/08/vulgar_poet.html)  
+[想法来源](https://github.com/aptxna/funny_poem)  
+
 
 ### js版的部署方法
 
