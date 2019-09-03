@@ -1,5 +1,32 @@
-## 恶俗古风诗歌生成器
 
+
+
+## 恶俗古风诗歌生成器
+此文件夹里有两个版本：js版（可以直接部署到网页上）和Python版
+
+### js版的部署方法
+
+```html
+
+
+```html
+<script src="http://www.guofei.site/vulgar_language_generator/amazing_title/vulgar_poet.js"></script>
+<script>
+    // 这一段代码可以放到head/引用/body中，都可以调用
+    function myFunction() {
+        document.getElementById("vulgar_poet").innerHTML += vulgar_poet();
+    }
+</script>
+
+<button type="button" onclick="myFunction()">恶俗古风诗歌生成器</button>
+<p id="vulgar_poet"></p>
+```
+
+```
+
+
+
+### Python版
 >乱世，未央，黄泉了回眸。
 一世长安，繁华落尽，终不敌眉目如画。
 白发，千年，红豆了凝霜。
