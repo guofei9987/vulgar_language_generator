@@ -14,30 +14,20 @@ two_char_words = ['朱砂', '天下', '杀伐', '人家', '韶华', '风华', '�
 four_char_words = ['情深缘浅', '情深不寿', '莫失莫忘', '阴阳相隔', '如花美眷', '似水流年',
                    '眉目如画', '曲终人散', '繁华落尽', '不诉离殇', '一世长安']
 
-sentence_model = ['xx，xx，xx了xx。', 'xxxx，xxxx，不过是一场xxxx。', '你说xxxx，我说xxxx，最后不过xxxx。',
-                  'xx，xx，许我一场xxxx。', '一x一x一xx，半x半x半xx。', '你说xxxxxxxx，后来xxxxxxxx。', 'xxxx，xxxx，终不敌xxxx。']
+sentence_model = ['{xx[0]}，{xx[1]}，{xx[2]}了{xx[3]}。', '{xxxx[0]}，{xxxx[1]}，不过是一场{xxxx[2]}。',
+                  '你说{xxxx[0]}，我说{xxxx[1]}，最后不过{xxxx[2]}。', '{xx[0]}，{xx[1]}，许我一场{xxxx[0]}。',
+                  '一{xx[0][0]}一{xx[0][1]}一{xx[1]}，半{xx[2][0]}半{xx[2][1]}半{xx[3]}。',
+                  '你说{xxxx[0]}{xxxx[1]}，后来{xxxx[2]}{xxxx[3]}。',
+                  '{xxxx[0]}，{xxxx[1]}，终不敌{xxxx[2]}。']
 
 
-def get_sentence():
-    sentence = random.choice(sentence_model)
-    four_char_re = re.compile('xxxx')
-    two_char_re = re.compile('xx')
-    one_char_re = re.compile('x')
-
-    while 'xxxx' in sentence:
-        sentence = four_char_re.sub(random.choice(four_char_words), sentence, 1)
-
-    while 'xx' in sentence:
-        sentence = two_char_re.sub(random.choice(two_char_words), sentence, 1)
-
-    while 'x' in sentence:
-        one_char = random.choice(random.choice(two_char_words))  # randomly select one char from two_char
-        sentence = one_char_re.sub(one_char, sentence, 1)
-
-    return sentence
+def generate_sentence():
+    random.shuffle(two_char_words)
+    random.shuffle(four_char_words)
+    return random.choice(sentence_model).format(xx=two_char_words, xxxx=four_char_words)
 
 
 if __name__ == '__main__':
-    for i in range(5):
-        s = get_sentence()
+    for i in range(50):
+        s = generate_sentence()
         print(s)
